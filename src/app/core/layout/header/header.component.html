@@ -1,0 +1,11 @@
+<header class="header">
+  <div class="header__brand">E-commerce</div>
+  <nav class="header__nav">
+    <a routerLink="/products">Products</a>
+    <a routerLink="/cart">Cart</a>
+    <a routerLink="/auth/profile">Profile</a>
+    <ng-container *ngIf="authService.isLoggedIn">
+      <a href="#" (click)="onLogout()">Logout</a>
+    </ng-container>
+  </nav>
+</header>

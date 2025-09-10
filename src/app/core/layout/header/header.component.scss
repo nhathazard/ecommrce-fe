@@ -1,0 +1,37 @@
+@use "variables" as *;
+@use "mixins" as *;
+:host {
+  display: block;
+  background: #0b5fff;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $sp-3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  &__nav {
+    display: flex;
+    gap: $sp-3;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
