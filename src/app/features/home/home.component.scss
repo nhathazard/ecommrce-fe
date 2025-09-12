@@ -1,0 +1,28 @@
+.home {
+  padding: 20px;
+}
+
+.product-viewport {
+  height: 600px; /* hoặc 80vh */
+  width: 100%;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+.product-card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 8px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.price {
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.loading {
+  font-style: italic;
+  color: gray;
+}

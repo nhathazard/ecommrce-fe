@@ -1,1 +1,17 @@
-<p>home works!</p>
+<ng-container *ngIf="productService.products().length; else loadingTpl">
+  <cdk-virtual-scroll-viewport itemSize="150" class="product-viewport">
+    <div
+      *cdkVirtualFor="let p of productService.products(); trackBy: trackById"
+      class="product-card"
+    >
+      <h2>{{ p.name }}</h2>
+      <input [(ngModel)]="p.description" />
+      <!-- test trackBy -->
+      <p class="price">{{ p.price | currency : "VND" }}</p>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</ng-container>
+
+<ng-template #loadingTpl>
+  <p class="loading">Loading product list...</p>
+</ng-template>
